@@ -1,38 +1,46 @@
 $(document).ready(function() {
   $(window).scroll(function(event) {
-    var scroll = $(window).scrollTop();
-    var sectThree = $('.section-3');
-    var mainHead = $('.main-head');
-    var sectTwo = $('.section-2');
-    if (scroll > 400) {
-      // sectThree.css({
-      //   position: 'relative';
-      //
-      // });
-      sectTwo.css({
-        position: 'absolute',
-        top: '0',
-        left: '0'
+    var scroll = $(window).scrollTop(),
+      sectThree = $('.section-3'),
+      mainHead = $('.main-head'),
+      mainHeadItems = $('.flex-nav li a'),
+      logoReveal = $('.logo-reveal'),
+      logoHidden = $('.logo-hidden'),
+      sectTwo = $('.section-2');
+
+    if (scroll > 1) {
+      mainHead.css({
+        fontSize: '1.5em'
       });
-    }else{
-      sectTwo.css({
-        position: '';
-      });
-      sectThree.css({
-        position: '';
+    } else {
+      mainHead.css({
+        fontSize: '',
       });
     }
-      if (scroll > 2) {
-        mainHead.css({
-          backgroundColor: 'rgb(189, 189, 189)',
-          color: 'black';
-        });
-      }else{
-        mainHead.css({
-          backgroundColor: '',
-          color: '';
-        });
-      }
+    if (scroll > 900) {
+      mainHeadItems.css({
+        color: 'black'
+      });
+      mainHead.css({
+        fontSize: '1.5em',
+        backgroundColor: 'rgb(221, 221, 221)'
+      });
+       logoReveal.detach();
+      logoHidden.css({
+        visibility: 'inherit',
+      });
+    } else {
+      mainHeadItems.css({
+        color: ''
+      });
+      mainHead.css({
+        fontSize: '',
+        backgroundColor: ''
+      });
+      logoReveal.append('.flex-nav')
+    }
   });
-
+  setTimeout(function() {
+    $('#css-pourcent').html('90%');
+  }, 3500);
 });

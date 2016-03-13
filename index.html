@@ -17,6 +17,12 @@
 
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <!-- endbuild -->
 
 </head>
@@ -30,18 +36,23 @@
     <header class="main-head">
       <nav>
         <ul class="flex-nav">
-          <li>Portfolio</li>
-          <li>
-            <a href="#Home">Home</a>
+          <li class="logo-reveal">
+            <img src="images/logo.png">
+          </li>
+          <li >
+            <img src="images/logo-black.png" alt=""  class="logo-hidden"/>
           </li>
           <li>
-            <a href="#About">About</a>
+            <a href="#Home"><i class="fa fa-home fa-2x"></i></a>
           </li>
           <li>
-            <a href="#Skills">Skills</a>
+            <a href="#About"><i class="fa fa-question fa-2x"></i></a>
           </li>
           <li>
-            <a href="#Contact">Contact</a>
+            <a href="#Skills"><i class="fa fa-briefcase fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#Contact"><i class="fa fa-phone fa-2x"></i></a>
           </li>
         </ul>
       </nav>
@@ -90,6 +101,17 @@
         </ul>
       </div>
     </div>
+    <div class="section-4" id="Contact">
+      <h1>Contact</h1>
+      <p>
+        My contact is as follows: 429-6828 Email is edwardkemp@gmail.com
+      </p>
+      <div class="cont-icons">
+        <i class="fa fa-phone fa-4x"></i>
+        <i class="fa fa-github fa-4x"></i>
+        <i class="fa fa-envelope fa-4x"></i>
+      </div>
+    </div>
     <div class="main-foot">
       <footer>
         <ul>
@@ -102,13 +124,8 @@
         </ul>
       </footer>
     </div>
-    <div class="section-4" id="contact">
-      <h1>Contact</h1>
-      <p>
-        My Name is Edward Kemp, I am a motivated; self taught Web Developer. I have a passion for technology although this is just one of many creative outles for me, Some of my other past times include photography, sports, and camping!
-      </p>
-    </div>
   </div>
+
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
@@ -130,7 +147,7 @@
 
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js" charset="utf-8"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
