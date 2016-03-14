@@ -37,7 +37,6 @@ $(document).ready(function() {
         fontSize: '',
         backgroundColor: ''
       });
-      logoReveal.append('.flex-nav')
     }
   });
   setTimeout(function() {
