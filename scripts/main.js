@@ -17,7 +17,7 @@ $(document).ready(function() {
         fontSize: '',
       });
     }
-    if (scroll > 900) {
+    if (scroll > 900 ) {
       mainHeadItems.css({
         color: 'black'
       });
@@ -25,11 +25,13 @@ $(document).ready(function() {
         fontSize: '1.5em',
         backgroundColor: 'rgb(221, 221, 221)'
       });
-       logoReveal.detach();
+      logoReveal.detach();
       logoHidden.css({
         visibility: 'inherit',
       });
-    } else {
+    }
+
+    else {
       mainHeadItems.css({
         color: ''
       });
@@ -42,4 +44,25 @@ $(document).ready(function() {
   setTimeout(function() {
     $('#css-pourcent').html('90%');
   }, 3500);
+  /* Every time the window is scrolled ... */
+  $(window).scroll(function() {
+
+    /* Check the location of each desired element */
+    $('.hideme, img').each(function(i) {
+
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+      /* If the object is completely visible in the window, fade it it */
+      if (bottom_of_window > bottom_of_object) {
+
+        $(this).animate({
+          'opacity': '1'
+        }, 500);
+
+      }
+
+    });
+
+  });
 });

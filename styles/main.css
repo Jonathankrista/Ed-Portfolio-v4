@@ -18,6 +18,15 @@ h1 {
   position: fixed;
   transition: .3s ease;
 }
+
+@media (max-width: 550px) {
+.main-head i.fa.fa-phone.fa-2x{
+  padding-right:20px  ;
+
+}
+}
+
+
 .flex-nav {
   display: flex;
   justify-content: center;
@@ -60,6 +69,11 @@ h1 {
   height: 45%;
   border-radius: 50%;
 }
+
+img#arrow.pointer {
+padding-bottom:50px;
+}
+
 .pointer {
   width: 10%;
   fill: white;
@@ -208,8 +222,9 @@ h1 {
   justify-content: center;
   position: relative;
   top: 100vh;
-  height: 100vh;
+  height: auto;
   text-align: center;
+  padding: 5eml
 }
 .section-2 h1 {
   border-bottom: 1px solid white;
@@ -224,6 +239,22 @@ h1 {
   border: 1px solid white;
   padding: 15px;
   justify-content: center;
+}
+
+.timeline{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.timeline img{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin: 30px 0 30px 0;
+  border:solid 5px #0ddb8f;
 }
 .section-3 {
   display: flex;
@@ -259,6 +290,35 @@ h1 {
 .cont-icons a {
   color: inherit;
 }
+
+.fa-home:hover {
+   color:#65db8a;
+
+}
+
+.fa-question:hover {
+  color:#65db8a;
+}
+
+.fa-briefcase:hover {
+  color:#65db8a;
+
+}
+
+.fa-phone:hover {
+  color:#65db8a;
+
+}
+
+.fa-github:hover {
+  color:#65db8a;
+
+}
+
+.fa-envelope:hover {
+  color:#65db8a;
+
+}
 .icons img {
   width: 10em;
   margin: 3.5em;
@@ -274,9 +334,8 @@ h1 {
 .main-foot {
   height: 4em;
   width: 100%;
-  background-color: rgb(40, 40, 40);
   position: relative;
-  top: 100vh;
+  top: 80vh;
   display: inline-block;
 }
 .section-4 {
@@ -312,7 +371,15 @@ h1 {
 .section-1 p:first-child {
   letter-spacing: 2px;
   font-size: 50px;
+  margin-top:25px;
+  margin-bottom:25px;
 }
+
+.section-1 p:nth-child(3){
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
 .flex-nav img {
   border-style: none!important;
   height: 30px;
@@ -389,7 +456,7 @@ li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5) {
 footer {
   width: 100%;
   display: inline-block;
-  margin: 2em 0;
+  margin:2em 0;
   height: 70px;
   background-color:#dddddd;
 }
@@ -410,12 +477,16 @@ footer .copyright p {
   line-height: 70px;
   text-transform: capitalize;
   letter-spacing: 1px;
+  margin-bottom: 0px;
+  margin-top:0px;
 }
 @media (max-width: 600px) {
   footer .copyright p {
     text-align: center;
     padding: 0;
+    margin-bottom: 0px;
   }
+
 }
 footer .social {
   width: 50%;
@@ -469,3 +540,7 @@ footer .social a:hover {
   font-size: 0.8em;
   width: 40%;
 }
+
+
+    }
+  }
